@@ -20,8 +20,6 @@ WORKDIR /app
 RUN apk add --no-cache ca-certificates tzdata
 
 COPY --from=builder /app/main .
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/src ./src
 
 ENV PORT=5000
 ENV GIN_MODE=release
