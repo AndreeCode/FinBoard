@@ -1,0 +1,15 @@
+info:
+  name: delete delete role-permission
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/role-permissions/:id"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

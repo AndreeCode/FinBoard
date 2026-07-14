@@ -1,0 +1,9 @@
+info:
+  name: categories
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit
+  cookies:
+    send: true

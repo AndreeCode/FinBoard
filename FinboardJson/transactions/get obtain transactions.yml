@@ -1,0 +1,17 @@
+info:
+  name: get obtain transactions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/transactions?category_id={{category_id}}"
+  auth: inherit
+  cookies:
+    send: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

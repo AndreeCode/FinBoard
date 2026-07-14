@@ -1,0 +1,7 @@
+.env
+tmp/
+coverage
+coverage.out
+*.test
+.vscode/
+.idea/

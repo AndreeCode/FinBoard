@@ -1,0 +1,22 @@
+info:
+  name: put update role
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/roles/bfc749c8-7ef5-41a9-af17-b59f47e77e19"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "addmdsadsasfesafadssin",
+        "description": "full acdasdceaefsss ddasdato system"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

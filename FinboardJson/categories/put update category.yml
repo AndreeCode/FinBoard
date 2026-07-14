@@ -1,0 +1,24 @@
+info:
+  name: put update category
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/categories/:id"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Expenses",
+        "description": "Expense categories",
+        "parent_id": null,
+        "user_id": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

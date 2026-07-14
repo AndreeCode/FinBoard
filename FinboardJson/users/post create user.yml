@@ -1,0 +1,25 @@
+info:
+  name: post create user
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/users"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "John",
+        "last_name": "Doe",
+        "email": "john@example.com",
+        "password": "password123",
+        "role_id": "{{role_id}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

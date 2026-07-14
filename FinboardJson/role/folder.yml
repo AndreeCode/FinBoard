@@ -1,0 +1,9 @@
+info:
+  name: role
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
+  cookies:
+    send: true

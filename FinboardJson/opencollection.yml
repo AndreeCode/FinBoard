@@ -1,0 +1,18 @@
+opencollection: 1.0.0
+
+info:
+  name: FinboardJson
+
+auth:
+  type: bearer
+  bearer:
+    - name: Authorization
+      value: "{{token}}"
+      enabled: true
+
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

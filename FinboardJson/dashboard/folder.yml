@@ -1,0 +1,9 @@
+info:
+  name: dashboard
+  type: folder
+  seq: 12
+
+request:
+  auth: inherit
+  cookies:
+    send: true

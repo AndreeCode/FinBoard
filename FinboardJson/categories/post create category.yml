@@ -1,0 +1,24 @@
+info:
+  name: post create category
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/categories"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Income",
+        "description": "Income categories",
+        "parent_id": null,
+        "user_id": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

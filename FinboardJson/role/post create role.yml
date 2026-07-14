@@ -1,0 +1,23 @@
+info:
+  name: post create role
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/roles"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "admdissasn",
+        "description": "full access to system",
+        "created_by": "d418ee7e-8b90-41a8-9baf-cb8b83f35a1f"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

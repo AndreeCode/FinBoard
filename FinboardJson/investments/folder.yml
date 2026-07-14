@@ -1,0 +1,9 @@
+info:
+  name: investments
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit
+  cookies:
+    send: true

@@ -1,0 +1,34 @@
+info:
+  name: post create transaction
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/transactions"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "{{user_id}}",
+        "category_id": "{{category_id}}",
+        "amount": 1000.00,
+        "type": "income",
+        "transaction_date": "2026-06-27",
+        "received_date": "2026-06-27",
+        "due_date": null,
+        "canceled": false,
+        "description": "Payment received"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: category_id
+      value: f52d857a-c3ed-4f2d-8759-33acda7c2966
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

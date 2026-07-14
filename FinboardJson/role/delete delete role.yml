@@ -1,0 +1,15 @@
+info:
+  name: delete delete role
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/roles/bfc749c8-7ef5-41a9-af17-b59f47e77e19"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

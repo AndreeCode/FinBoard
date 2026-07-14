@@ -1,0 +1,26 @@
+info:
+  name: put update credit
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/credits/{{credit_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "person_name": "Juan Perez Actualizado",
+        "amount": 1500.00,
+        "interest_rate": 7.0,
+        "is_creditor": false,
+        "is_secure": false,
+        "status": "paid"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

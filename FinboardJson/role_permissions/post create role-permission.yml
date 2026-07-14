@@ -1,0 +1,22 @@
+info:
+  name: post create role-permission
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/role-permissions"
+  body:
+    type: json
+    data: |-
+      {
+        "role_id": "{{role_id}}",
+        "permission_id": "{{permission_id}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

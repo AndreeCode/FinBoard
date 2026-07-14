@@ -1,0 +1,27 @@
+info:
+  name: post create credit
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/credits"
+  body:
+    type: json
+    data: |-
+      {
+        "person_name": "Juan Perez",
+        "amount": 1000.00,
+        "interest_rate": 5.5,
+        "is_creditor": true,
+        "is_secure": true,
+        "due_date": "2026-12-31T23:59:59Z",
+        "status": "pending"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: post create permission
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/permissions"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "read_categories",
+        "description": "Permission to read categories"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

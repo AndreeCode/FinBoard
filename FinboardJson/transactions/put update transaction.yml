@@ -1,0 +1,28 @@
+info:
+  name: put update transaction
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/transactions/:id"
+  body:
+    type: json
+    data: |-
+      {
+        "category_id": "{{category_id}}",
+        "amount": 1500.00,
+        "type": "income",
+        "transaction_date": "2026-06-28",
+        "received_date": "2026-06-28",
+        "due_date": null,
+        "canceled": false,
+        "description": "Updated payment"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
