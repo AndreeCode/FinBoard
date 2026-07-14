@@ -44,7 +44,11 @@ func main() {
 	if err := s.Seed(context.Background()); err != nil {
 		log.Printf("Seeder warning: %v", err)
 	}
-	app.Group("/api")
+
+	app.Get("/health", func(c fiber.Ctx) error {
+		return c.SendStatus(fiber.StatusOK)
+	})
+
 	routes.RegisterRoutes(app)
 
 	port := config.Config.Port
